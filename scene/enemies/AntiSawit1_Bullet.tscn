@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bvth46ygov2fy"]
+
+[ext_resource type="Script" uid="uid://t4r61kb7ntp" path="res://scene/enemies/anti_sawit_1_bullet.gd" id="1_3ruec"]
+[ext_resource type="Texture2D" uid="uid://d2ya1n6dtyhmu" path="res://asset/white_colour.png" id="2_3xhqe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nhy22"]
+radius = 7.0
+height = 14.0
+
+[node name="AntiSawitBullet" type="CharacterBody2D" unique_id=942015208]
+collision_layer = 128
+collision_mask = 26
+script = ExtResource("1_3ruec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2131927889]
+shape = SubResource("CapsuleShape2D_nhy22")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1727763457]
+modulate = Color(0.8033672, 0.20989797, 5.7756904e-07, 1)
+scale = Vector2(0.036363635, 0.05464481)
+texture = ExtResource("2_3xhqe")

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://i4i4nf5um2k8"]
+
+[ext_resource type="Texture2D" uid="uid://dnhjqtrl816c0" path="res://asset/b5651d.png" id="1_0bqv0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_soggu"]
+atlas = ExtResource("1_0bqv0")
+region = Rect2(-0.3, 0, 0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bqv0"]
+size = Vector2(640, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soggu"]
+size = Vector2(144, 357)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ly4mi"]
+size = Vector2(144, 325)
+
+[node name="Map" type="Node2D" unique_id=1380900792]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2047041629]
+position = Vector2(0, -6.67572e-06)
+scale = Vector2(0.64000005, 0.256)
+texture = SubResource("AtlasTexture_soggu")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=4422854]
+collision_layer = 8
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=398307835]
+position = Vector2(0, -95.5)
+shape = SubResource("RectangleShape2D_0bqv0")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=1314573643]
+collision_layer = 16
+collision_mask = 3
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall" unique_id=277066842]
+position = Vector2(-392, -261.5)
+shape = SubResource("RectangleShape2D_soggu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Wall" unique_id=1823154497]
+position = Vector2(392, -237.5)
+shape = SubResource("RectangleShape2D_ly4mi")

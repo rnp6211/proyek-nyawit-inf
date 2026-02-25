@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://2dyx608hu1vi"]
+
+[ext_resource type="PackedScene" uid="uid://csayn0qrm0ol8" path="res://scene/player/Player.tscn" id="1_e7hha"]
+[ext_resource type="PackedScene" uid="uid://i4i4nf5um2k8" path="res://scene/Map.tscn" id="1_vg7sv"]
+[ext_resource type="PackedScene" uid="uid://b1qeaxwt8234v" path="res://scene/enemies/AntiSawit1.tscn" id="4_vg7sv"]
+[ext_resource type="PackedScene" uid="uid://di53sdsum5ek2" path="res://scene/enemies/AntiSawit2.tscn" id="5_0qanc"]
+[ext_resource type="Script" uid="uid://blmrcksq2woaa" path="res://scene/health.gd" id="5_1qeit"]
+[ext_resource type="Script" uid="uid://ceqtnvce4w5sa" path="res://scene/wave_logic.gd" id="5_ripxc"]
+[ext_resource type="AudioStream" uid="uid://cji7nti6efvnr" path="res://asset/bgm.ogg" id="6_1qeit"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t585p"]
+font_size = 50
+
+[node name="Game" type="Node2D" unique_id=1571335153]
+
+[node name="Map" parent="." unique_id=1380900792 instance=ExtResource("1_vg7sv")]
+position = Vector2(320, 416)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1564420845]
+
+[node name="Bullets" type="Node2D" parent="." unique_id=311151623]
+
+[node name="Player" parent="." unique_id=1964299542 instance=ExtResource("1_e7hha")]
+position = Vector2(320, 288)
+
+[node name="WaveLogic" type="Node2D" parent="." unique_id=1347175486]
+script = ExtResource("5_ripxc")
+Sawit1 = ExtResource("4_vg7sv")
+Sawit2 = ExtResource("5_0qanc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1846707468]
+
+[node name="Health" type="Label" parent="CanvasLayer" unique_id=824166871]
+offset_right = 24.0
+offset_bottom = 40.0
+text = "5"
+label_settings = SubResource("LabelSettings_t585p")
+script = ExtResource("5_1qeit")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=212718144]
+stream = ExtResource("6_1qeit")

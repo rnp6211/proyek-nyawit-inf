@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://di53sdsum5ek2"]
+
+[ext_resource type="Texture2D" uid="uid://dcu3xik6mtfwe" path="res://asset/martianFlyer.png" id="1_evw4o"]
+[ext_resource type="Script" uid="uid://c2xpuaej3gdbc" path="res://scene/enemies/anti_sawit_2.gd" id="1_ph7ap"]
+[ext_resource type="PackedScene" uid="uid://d33ndr48k7nik" path="res://scene/enemies/AntiSawit2_Attack.tscn" id="3_plvt3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_evw4o"]
+radius = 24.0
+height = 48.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph7ap"]
+atlas = ExtResource("1_evw4o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plvt3"]
+atlas = ExtResource("1_evw4o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkn6c"]
+atlas = ExtResource("1_evw4o")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7i4h"]
+atlas = ExtResource("1_evw4o")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14k5g"]
+atlas = ExtResource("1_evw4o")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti10u"]
+atlas = ExtResource("1_evw4o")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kkeu0"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ph7ap")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_plvt3")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_jkn6c")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_r7i4h")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_14k5g")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ti10u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AntiSawit2" type="CharacterBody2D" unique_id=1306800626]
+collision_mask = 24
+script = ExtResource("1_ph7ap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1554616692]
+shape = SubResource("CapsuleShape2D_evw4o")
+
+[node name="AntiSawit2Attack" parent="." unique_id=1917901759 instance=ExtResource("3_plvt3")]
+process_mode = 4
+visible = false
+position = Vector2(0, 16)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1147838260]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_kkeu0")
+autoplay = "default"

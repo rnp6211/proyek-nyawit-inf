@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dxo1o0xlujt8o"]
+
+[ext_resource type="Script" uid="uid://c4pnbm7b1c57d" path="res://scene/player/attack.gd" id="1_ccwyh"]
+
+[node name="Attack" type="Area2D" unique_id=438474011]
+visible = false
+collision_layer = 4
+script = ExtResource("1_ccwyh")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]
