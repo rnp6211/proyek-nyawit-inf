@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-@export var health: int = 10
+@export var health: int = 1
 @export var speed: int = 130
 @export var jump_accel: int = -350
 @export var get_hit_cd: float = 1

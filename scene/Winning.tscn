@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://gne5u4txtn8k"]
 
+[ext_resource type="FontFile" uid="uid://b276qi4a6hkco" path="res://asset/quite-magical-font/QuiteMagicalRegular-8VA2.ttf" id="1_alhun"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8wad"]
 bg_color = Color(0.21470258, 0.21470258, 0.21470246, 1)
 corner_radius_top_left = 40
@@ -7,15 +9,9 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="SystemFont" id="SystemFont_l8wad"]
-font_names = PackedStringArray("Fantasy")
-
 [sub_resource type="LabelSettings" id="LabelSettings_alhun"]
-font = SubResource("SystemFont_l8wad")
+font = ExtResource("1_alhun")
 font_size = 40
-
-[sub_resource type="SystemFont" id="SystemFont_alhun"]
-font_names = PackedStringArray("Fantasy")
 
 [node name="Winning" type="Control" unique_id=665327501]
 layout_mode = 3
@@ -68,6 +64,6 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-theme_override_fonts/font = SubResource("SystemFont_alhun")
+theme_override_fonts/font = ExtResource("1_alhun")
 theme_override_font_sizes/font_size = 45
 text = "Restart"

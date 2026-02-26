@@ -9,12 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://gne5u4txtn8k" path="res://scene/Winning.tscn" id="6_4cigq"]
 [ext_resource type="AudioStream" uid="uid://caao1gom2bpty" path="res://asset/Memory by Sol IX.ogg" id="7_0qanc"]
 [ext_resource type="PackedScene" uid="uid://ytw7bt7cfkaq" path="res://scene/Losing.tscn" id="7_f6bub"]
-
-[sub_resource type="SystemFont" id="SystemFont_0qanc"]
-font_names = PackedStringArray("Fantasy")
+[ext_resource type="FontFile" uid="uid://b276qi4a6hkco" path="res://asset/quite-magical-font/QuiteMagicalRegular-8VA2.ttf" id="8_f6bub"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t585p"]
-font = SubResource("SystemFont_0qanc")
+font = ExtResource("8_f6bub")
 font_size = 72
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qanc"]
@@ -45,8 +43,9 @@ process_mode = 3
 
 [node name="Health" type="Label" parent="CanvasLayer" unique_id=824166871]
 offset_left = 16.0
+offset_top = 16.0
 offset_right = 61.0
-offset_bottom = 73.0
+offset_bottom = 89.0
 text = "10"
 label_settings = SubResource("LabelSettings_t585p")
 script = ExtResource("5_1qeit")

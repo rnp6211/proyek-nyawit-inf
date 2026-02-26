@@ -114,5 +114,6 @@ func restart_game() -> void:
 	get_tree().root.add_child(game)
 	get_tree().current_scene = game
 	cur_game.queue_free()
+	get_viewport().get_camera_2d().queue_free()
 	get_tree().paused = false
 	get_tree().root.remove_child(cur_game)
