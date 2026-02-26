@@ -4,6 +4,12 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	velocity_0 = velocity
+	if velocity_0.x < 0:
+		rotation_degrees = 180
+	elif velocity_0.y > 0:
+		rotation_degrees = 90
+	elif velocity_0.y < 0:
+		rotation_degrees = -90
 	
 var total_delta: float
 

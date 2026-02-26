@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://i4i4nf5um2k8"]
 
 [ext_resource type="Texture2D" uid="uid://dnhjqtrl816c0" path="res://asset/b5651d.png" id="1_0bqv0"]
+[ext_resource type="Texture2D" uid="uid://lk3so4f8jvhe" path="res://asset/bg_lagnit.png" id="1_ly4mi"]
+[ext_resource type="Texture2D" uid="uid://b55sbp7ha6jye" path="res://asset/bg_gunung.png" id="2_qlu6v"]
+[ext_resource type="Texture2D" uid="uid://cjr4fncm2agh8" path="res://asset/1000_F_275456879_TltppdNWNMRHrP7LGzws3kq12FjUszKB.jpg" id="4_qlu6v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soggu"]
 atlas = ExtResource("1_0bqv0")
 region = Rect2(-0.3, 0, 0, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aixmw"]
+blend_mode = 4
+light_mode = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bqv0"]
 size = Vector2(640, 65)
@@ -17,12 +24,29 @@ size = Vector2(144, 325)
 
 [node name="Map" type="Node2D" unique_id=1380900792]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2047041629]
+[node name="Sky" type="Sprite2D" parent="." unique_id=1705026330]
+position = Vector2(0, -64)
+scale = Vector2(0.6328125, 0.6328125)
+texture = ExtResource("1_ly4mi")
+
+[node name="Mountain" type="Sprite2D" parent="." unique_id=605642497]
+position = Vector2(3.3881318e-21, -256)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_qlu6v")
+
+[node name="Floor2" type="Sprite2D" parent="." unique_id=2047041629]
 position = Vector2(0, -6.67572e-06)
 scale = Vector2(0.64000005, 0.256)
 texture = SubResource("AtlasTexture_soggu")
 
+[node name="Sprite2D" type="Sprite2D" parent="Floor2" unique_id=252349006]
+modulate = Color(0.27450982, 0.13333334, 0.08235294, 1)
+material = SubResource("CanvasItemMaterial_aixmw")
+position = Vector2(0, -164.06247)
+texture = ExtResource("4_qlu6v")
+
 [node name="Floor" type="StaticBody2D" parent="." unique_id=4422854]
+visible = false
 collision_layer = 8
 collision_mask = 3
 

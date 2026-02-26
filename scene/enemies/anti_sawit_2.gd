@@ -51,10 +51,10 @@ func _physics_process(delta: float) -> void:
 		var distance = abs(position - player.position).length()
 		if distance < 200:
 			var anim_tween = create_tween()
-			anim_tween.tween_property($AnimatedSprite2D, "modulate", Color(3, 3, 3), 1).set_ease(Tween.EASE_IN).from(Color(1, 1, 1))
+			anim_tween.tween_property(self, "modulate", Color(3, 3, 3), 1).set_ease(Tween.EASE_IN).from(Color(1, 1, 1))
 
 			var attack_func = func() -> void:
-				$AnimatedSprite2D.modulate = Color(1, 1, 1)
+				modulate = Color(1, 1, 1)
 				if terminated:
 					return
 				$AntiSawit2Attack.show()

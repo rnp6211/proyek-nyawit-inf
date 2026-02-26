@@ -6,10 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://di53sdsum5ek2" path="res://scene/enemies/AntiSawit2.tscn" id="5_0qanc"]
 [ext_resource type="Script" uid="uid://blmrcksq2woaa" path="res://scene/health.gd" id="5_1qeit"]
 [ext_resource type="Script" uid="uid://ceqtnvce4w5sa" path="res://scene/wave_logic.gd" id="5_ripxc"]
-[ext_resource type="AudioStream" uid="uid://cji7nti6efvnr" path="res://asset/bgm.ogg" id="6_1qeit"]
+[ext_resource type="AudioStream" uid="uid://caao1gom2bpty" path="res://asset/Memory by Sol IX.ogg" id="7_0qanc"]
+
+[sub_resource type="SystemFont" id="SystemFont_0qanc"]
+font_names = PackedStringArray("Fantasy")
 
 [sub_resource type="LabelSettings" id="LabelSettings_t585p"]
-font_size = 50
+font = SubResource("SystemFont_0qanc")
+font_size = 72
 
 [node name="Game" type="Node2D" unique_id=1571335153]
 
@@ -31,11 +35,13 @@ Sawit2 = ExtResource("5_0qanc")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1846707468]
 
 [node name="Health" type="Label" parent="CanvasLayer" unique_id=824166871]
-offset_right = 24.0
-offset_bottom = 40.0
-text = "5"
+offset_left = 16.0
+offset_right = 61.0
+offset_bottom = 73.0
+text = "10"
 label_settings = SubResource("LabelSettings_t585p")
 script = ExtResource("5_1qeit")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=212718144]
-stream = ExtResource("6_1qeit")
+stream = ExtResource("7_0qanc")
+autoplay = true

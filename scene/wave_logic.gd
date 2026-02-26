@@ -65,12 +65,12 @@ func wave_2_count_antisawit2() -> int:
 
 func spawn_enemy(node: Node2D) -> void:
 	var neg = randi_range(0, 1)
-	var x = player.position.x + (-1 if neg == 1 else 1) * 360
+	var x: float = player.position.x + (-1 if neg == 1 else 1) * 320
 	
 	if x < 0:
-		x = player.position.x + 360
+		x = min(player.position.x + 320, 640)
 	elif x > 640:
-		x = player.position.x - 360
+		x = max(0, player.position.x - 320)
 	
 	node.position.x = x
 	node.position.y = 288
