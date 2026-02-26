@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://ytw7bt7cfkaq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htdkb"]
+bg_color = Color(0.21470258, 0.21470258, 0.21470246, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="SystemFont" id="SystemFont_l8wad"]
+font_names = PackedStringArray("Fantasy")
+
+[sub_resource type="LabelSettings" id="LabelSettings_alhun"]
+font = SubResource("SystemFont_l8wad")
+font_size = 40
+
+[sub_resource type="SystemFont" id="SystemFont_alhun"]
+font_names = PackedStringArray("Fantasy")
+
+[node name="Losing" type="Control" unique_id=665327501]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1389067773]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -96.0
+offset_right = 128.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxFlat_htdkb")
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=1174772573]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -76.0
+offset_right = 128.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="VBox" unique_id=856826842]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_alhun")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBox" unique_id=282722804]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = SubResource("SystemFont_alhun")
+theme_override_font_sizes/font_size = 45
+text = "Restart"

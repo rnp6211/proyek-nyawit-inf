@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dnhjqtrl816c0" path="res://asset/b5651d.png" id="1_0bqv0"]
 [ext_resource type="Texture2D" uid="uid://lk3so4f8jvhe" path="res://asset/bg_lagnit.png" id="1_ly4mi"]
+[ext_resource type="Script" uid="uid://ch141nvglm2dr" path="res://scene/map/sky.gd" id="2_aixmw"]
 [ext_resource type="Texture2D" uid="uid://b55sbp7ha6jye" path="res://asset/bg_gunung.png" id="2_qlu6v"]
 [ext_resource type="Texture2D" uid="uid://cjr4fncm2agh8" path="res://asset/1000_F_275456879_TltppdNWNMRHrP7LGzws3kq12FjUszKB.jpg" id="4_qlu6v"]
+[ext_resource type="Script" uid="uid://yli8qpdy8rvv" path="res://scene/map/mountain.gd" id="4_ripiu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_soggu"]
 atlas = ExtResource("1_0bqv0")
@@ -28,11 +30,13 @@ size = Vector2(144, 325)
 position = Vector2(0, -64)
 scale = Vector2(0.6328125, 0.6328125)
 texture = ExtResource("1_ly4mi")
+script = ExtResource("2_aixmw")
 
 [node name="Mountain" type="Sprite2D" parent="." unique_id=605642497]
 position = Vector2(3.3881318e-21, -256)
 scale = Vector2(0.625, 0.625)
 texture = ExtResource("2_qlu6v")
+script = ExtResource("4_ripiu")
 
 [node name="Floor2" type="Sprite2D" parent="." unique_id=2047041629]
 position = Vector2(0, -6.67572e-06)
