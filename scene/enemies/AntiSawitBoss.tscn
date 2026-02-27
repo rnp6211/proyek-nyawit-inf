@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://ctct8ii7so84j"]
+
+[ext_resource type="Texture2D" uid="uid://di2b88s3qrpuf" path="res://asset/martianBoss_colored.png" id="1_6yfcs"]
+[ext_resource type="Script" uid="uid://oac4bw7o8sja" path="res://scene/enemies/anti_sawit_boss.gd" id="1_wi8mf"]
+[ext_resource type="PackedScene" uid="uid://bvth46ygov2fy" path="res://scene/enemies/AntiSawit1_Bullet.tscn" id="2_vbj6u"]
+[ext_resource type="PackedScene" uid="uid://b1qeaxwt8234v" path="res://scene/enemies/AntiSawit1.tscn" id="3_exk78"]
+[ext_resource type="PackedScene" uid="uid://di53sdsum5ek2" path="res://scene/enemies/AntiSawit2.tscn" id="4_0e2au"]
+[ext_resource type="PackedScene" uid="uid://d33ndr48k7nik" path="res://scene/enemies/AntiSawit2_Attack.tscn" id="6_exk78"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi8mf"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(96, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffaaa"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(192, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6vci"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(288, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbj6u"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(384, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exk78"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(480, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e2au"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(576, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8yep"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(672, 0, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwmob"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(768, 0, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_exk78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi8mf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffaaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6vci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbj6u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exk78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e2au")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8yep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwmob")
+}],
+"loop": true,
+"name": &"half",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t04qk"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(96, 64, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70n4o"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(192, 64, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsl4r"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(288, 64, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mk35"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(384, 64, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_251tp"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(480, 64, 96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y2wf"]
+atlas = ExtResource("1_6yfcs")
+region = Rect2(576, 64, 96, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vwmdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t04qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70n4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsl4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mk35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_251tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y2wf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6yfcs"]
+radius = 64.0
+height = 128.0
+
+[node name="AntiSawitBoss" type="CharacterBody2D" unique_id=1807418904]
+collision_mask = 24
+script = ExtResource("1_wi8mf")
+Bullet = ExtResource("2_vbj6u")
+Sawit1 = ExtResource("3_exk78")
+Sawit2 = ExtResource("4_0e2au")
+
+[node name="AntiSawit2Attack" parent="." unique_id=843876053 instance=ExtResource("6_exk78")]
+process_mode = 4
+visible = false
+position = Vector2(0, -48)
+scale = Vector2(2, 2)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1983701018]
+position = Vector2(0, 80)
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D" unique_id=635077137]
+position = Vector2(0, -80)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_exk78")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Node2D" unique_id=2138622320]
+visible = false
+position = Vector2(0, -80)
+scale = Vector2(2.125, 2.125)
+sprite_frames = SubResource("SpriteFrames_vwmdl")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1626364789]
+position = Vector2(0, -112)
+shape = SubResource("CapsuleShape2D_6yfcs")

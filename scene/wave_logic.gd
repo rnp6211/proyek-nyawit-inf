@@ -9,8 +9,10 @@ var wave: int = 1;
 
 @export var Sawit1: PackedScene
 @export var Sawit2: PackedScene
+@export var SawitBoss: PackedScene
 @export var WinningScene: PackedScene
 @export var LosingScene: PackedScene
+@export var BossMusic: AudioStream
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,7 +30,30 @@ func _process(delta: float) -> void:
 	elif wave == 2:
 		wave_2_logic(delta)
 	elif wave == 3:
+		wave_3_logic(delta)
+	elif wave == 4:
 		end_game(true)
+
+var wave_3_started = false
+var wave_3_boss_spawned = false
+var wave_3_delta: float = 0
+
+func wave_3_logic(delta: float) -> void:
+	if not wave_3_started:
+		wave_3_started = true
+		$"../Map/BossSpawn".on_wave_3_start()
+		var boss = SawitBoss.instantiate()
+		spawn_enemy(boss)
+		wave_3_boss_spawned = true
+		$"../AudioStreamPlayer".stream = BossMusic
+		$"../AudioStreamPlayer".play()
+	elif not wave_3_boss_spawned:
+		return
+
+	if wave_3_delta >= 1 and enemies.get_children().size() <= 0:
+		wave = 4
+	else:
+		wave_3_delta += delta
 
 var wave_1_spawn_delta: float = 0
 var wave_1_enemies_spawned = 0

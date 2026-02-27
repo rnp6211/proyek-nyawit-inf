@@ -1,4 +1,4 @@
-extends Sprite2D
+extends TileMapLayer
 
 var camera_pos: Vector2
 
@@ -13,9 +13,10 @@ func _process(delta: float) -> void:
 		return
 	var camera: Camera2D = get_viewport().get_camera_2d()
 
+
 	var new_camera_pos = camera.get_screen_center_position()
 	var cam_pos_x_delta = new_camera_pos.x - camera_pos.x
 
-	position.x += cam_pos_x_delta * (4.0/5)
+	position.x += cam_pos_x_delta * (1.0/2)
 
 	camera_pos = new_camera_pos

@@ -1,49 +1,40 @@
 [gd_scene format=3 uid="uid://di53sdsum5ek2"]
 
-[ext_resource type="Texture2D" uid="uid://dcu3xik6mtfwe" path="res://asset/martianFlyer.png" id="1_evw4o"]
 [ext_resource type="Script" uid="uid://c2xpuaej3gdbc" path="res://scene/enemies/anti_sawit_2.gd" id="1_ph7ap"]
+[ext_resource type="Texture2D" uid="uid://bhupb4723cd1r" path="res://asset/martianFlyer_colored.png" id="3_jkn6c"]
 [ext_resource type="PackedScene" uid="uid://d33ndr48k7nik" path="res://scene/enemies/AntiSawit2_Attack.tscn" id="3_plvt3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_evw4o"]
 radius = 24.0
 height = 48.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ph7ap"]
-atlas = ExtResource("1_evw4o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7i4h"]
+atlas = ExtResource("3_jkn6c")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_plvt3"]
-atlas = ExtResource("1_evw4o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_14k5g"]
+atlas = ExtResource("3_jkn6c")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jkn6c"]
-atlas = ExtResource("1_evw4o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti10u"]
+atlas = ExtResource("3_jkn6c")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r7i4h"]
-atlas = ExtResource("1_evw4o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkeu0"]
+atlas = ExtResource("3_jkn6c")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_14k5g"]
-atlas = ExtResource("1_evw4o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_32fvf"]
+atlas = ExtResource("3_jkn6c")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ti10u"]
-atlas = ExtResource("1_evw4o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar4sm"]
+atlas = ExtResource("3_jkn6c")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kkeu0"]
 animations = [{
 "frames": [{
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_ph7ap")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_plvt3")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_jkn6c")
-}, {
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_r7i4h")
 }, {
@@ -52,6 +43,15 @@ animations = [{
 }, {
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_ti10u")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_kkeu0")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_32fvf")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ar4sm")
 }],
 "loop": true,
 "name": &"default",
