@@ -8,10 +8,10 @@
 [ext_resource type="Script" uid="uid://ceqtnvce4w5sa" path="res://scene/wave_logic.gd" id="5_ripxc"]
 [ext_resource type="PackedScene" uid="uid://gne5u4txtn8k" path="res://scene/Winning.tscn" id="6_4cigq"]
 [ext_resource type="PackedScene" uid="uid://ctct8ii7so84j" path="res://scene/enemies/AntiSawitBoss.tscn" id="6_r3aus"]
+[ext_resource type="AudioStream" uid="uid://caao1gom2bpty" path="res://asset/Memory by Sol IX.ogg" id="7_0qanc"]
 [ext_resource type="PackedScene" uid="uid://ytw7bt7cfkaq" path="res://scene/Losing.tscn" id="7_f6bub"]
 [ext_resource type="FontFile" uid="uid://b276qi4a6hkco" path="res://asset/quite-magical-font/QuiteMagicalRegular-8VA2.ttf" id="8_f6bub"]
 [ext_resource type="AudioStream" uid="uid://gsd7ccstt707" path="res://asset/boss.ogg" id="9_l37l5"]
-[ext_resource type="AudioStream" uid="uid://bag4rd4s4d8xp" path="res://asset/backsound.ogg" id="11_r3aus"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t585p"]
 font = ExtResource("8_f6bub")
@@ -63,7 +63,7 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0qanc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=212718144]
-stream = ExtResource("11_r3aus")
+stream = ExtResource("7_0qanc")
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=214828090]
